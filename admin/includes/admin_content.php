@@ -49,11 +49,13 @@
             // $user->username = "STUDENT";
             // $user->save();
 
-            $photo = new Photo();
+            // $photo = new Photo();
 
-            $photo->title = "Just some test";
-            $photo->size = 20;
-            $photo->create();
+            // $photo->title = "Just some test";
+            // $photo->size = 20;
+            // $photo->create();
+
+            echo INCLUDES_PATH;
 
              ?>
 
