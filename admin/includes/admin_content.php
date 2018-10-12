@@ -22,6 +22,8 @@
 
 
             // $user = User::find_by_id(6);
+
+            // echo $user->username;
             // $user->username = "pac";
             // $user->password = "5464537346573";
             // $user->first_name = "MP";
@@ -55,7 +57,10 @@
             // $photo->size = 20;
             // $photo->create();
 
-            echo INCLUDES_PATH;
+            // echo INCLUDES_PATH;
+            $photo = Photo::find_by_id(7);
+
+            echo $photo->filename;
 
              ?>
 
