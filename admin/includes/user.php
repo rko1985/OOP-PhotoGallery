@@ -104,20 +104,26 @@ class User extends Db_object {
 
   public function delete_photo(){
 
-    if($this->delete()) {
+        if($this->delete()) {
 
-        $target_path = SITE_ROOT.DS. 'admin' . DS. $this->upload_directory . DS . $this->user_image;
+            $target_path = SITE_ROOT.DS. 'admin' . DS. $this->upload_directory . DS . $this->user_image;
 
-        return unlink($target_path) ? true : false;
-       
+            return unlink($target_path) ? true : false;
+        
 
-    } else {
+        } else {
 
-        return false;
+            return false;
+
+        }
 
     }
 
-}
+    public function photos(){
+
+        return Photo::find_by_query("SELECT * FROM photos WHERE user_id = " . $this->id);
+
+    }
 
    
 
